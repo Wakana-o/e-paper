@@ -3,3 +3,8 @@ GPIO and other IO functions on the Broadcom BCM 2835 chip.
 allowing access to the 
 26 pin ISE plug on the RPi board so you can control and interface with various
 external devices.
+
+You can get and use Waveshare official democode via below to display sample picture.
+https://github.com/waveshare/IT8951-ePaper
+
+when you want to display your BMP picture please replace /example/main.c and /example/example.c from Waveshare original code to my code.
