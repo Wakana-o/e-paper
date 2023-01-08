@@ -7,4 +7,21 @@ external devices.
 You can get and use Waveshare official democode via below to display sample picture.
 https://github.com/waveshare/IT8951-ePaper
 
-when you want to display your BMP picture please replace /example/main.c and /example/example.c from Waveshare original code to my code.
+When you want to display your BMP picture please replace /examples/main.c and /examples/example.c
+from Waveshare original code to my code.
+
+Line you need to change is below
+To select your bmp file 
+example.c(l211)
+    sprintf(Path,"./pic/%dx%d_4.bmp", WIDTH, HEIGHT);
+    
+To change display pattern 
+main.c(l148)
+   //Show a bmp file
+    //1bp use A2 mode by default, before used it, refresh the screen with WHITE
+    //Display_BMP_Example(Panel_Width, Panel_Height, Init_Target_Memory_Addr, BitsPerPixel_1);
+    //Display_BMP_Example(Panel_Width, Panel_Height, Init_Target_Memory_Addr, BitsPerPixel_2);
+    Display_BMP_Example(Panel_Width, Panel_Height, Init_Target_Memory_Addr, BitsPerPixel_4);
+    DEV_Delay_ms(5000);
+    EPD_IT8951_Clear_Refresh(Dev_Info, Init_Target_Memory_Addr, GC16_Mode);
+    
