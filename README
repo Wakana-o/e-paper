@@ -25,3 +25,15 @@ main.c(l148)
     DEV_Delay_ms(5000);
     EPD_IT8951_Clear_Refresh(Dev_Info, Init_Target_Memory_Addr, GC16_Mode);
     
+how to run exe
+     type below command
+        //To clean display
+        cd home/pi/bcm2835-1.71-clean/IT8951-ePaper/Raspberry 
+        sudo ./epd -1.73 0
+
+
+        //To display picture
+        cd home/pi/bcm2835-1.71/IT8951-ePaper/Raspberry
+        make clean
+        sudo make
+        sudo ./epd -1.73 0
